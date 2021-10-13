@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <title>도미노피자</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <div id="app">
+        <header>
+            <h1 v-text="sitename"></h1>
+        </header>
+        <main>
+            <div class="rowproduct">
+                <div class="col">
+                    <figure>
+                        <img v-bind:src="delivery.img">
+                    </figure>
+                </div>
+                <div class="col col-expand">
+                    <h1 v-text="delivery.title"></h1>
+                    <p v-text="delivery.description"></p>
+                </div>
+            </div>
+        </main>
+
+
+    </div>
+    <script type="text/javascript">
+        let webstore = new Vue({
+            el: '#app',
+            data:{
+                sitename:'Dominos pizza',
+                delivery:{
+                    id:1001,
+                    title:'배달주문',
+                    description: '등급별 최대30%',
+                    img:"/images/banner-floating_200827.png"
+            }
+            }
+        });
+
+    </script>
+</body>
+
+</html>
