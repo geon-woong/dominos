@@ -597,7 +597,8 @@ gnb .snb-more.active:after {
   border-top: 1px solid #ddd;
 }
 .f-main {
-  padding: 45px 100px 40px 100px;
+  margin:  0 auto;
+  padding: 45px 0;
   background-color: #fff;
   display: flex;
 }
