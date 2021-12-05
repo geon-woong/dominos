@@ -1,4 +1,46 @@
 $(document).ready(function () {
+
+    // 모달창 닫기 자바스크립트
+    // btn.addEventListener("click", function (e) {
+    //     modal.style.display = "none";
+    //     modal_content.style.display = "none";
+    // })
+    // modal.addEventListener('click', function (e) {
+    //     modal.style.display = "none";
+    //     modal_content.style.display = "none";
+
+    //     modal_content.stopPropagation();
+    // });
+    const btn = document.querySelector(".modal-btn");
+    var modal = document.querySelector(".modal");
+    const modal_content = document.querySelector(".modal-content");
+
+    function modal_close(params) {
+        params.addEventListener("click", function (e) {
+            modal.style.display = "none";
+            modal_content.style.display = "none";
+        })
+    }
+    modal_close(btn);
+    modal_close(modal);
+
+    //모달창 닫기  Jquery
+    // $(".modal-btn").click(function (e) {
+    //     $(".modal").fadeOut();
+    // })
+
+    // $(".modal").click(function (e) {
+    //     $(".modal").fadeOut();
+    //     e.preventDefault();
+
+    //     $('.modal-content').stopPropagation();
+
+
+    // })
+
+
+
+
     //header fixed
     let header = $('.header');
     let nav_wrap = $('.nav-wrap');

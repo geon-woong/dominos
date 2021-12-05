@@ -19,8 +19,55 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 
 </head>
+<style>
+    /* 모달창 */
+    .black-bg {
+        z-index: 99999998;
+        position: fixed;
+        top: 0%;
+        left: 0%;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .white-bg {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 99999999;
+        background: #fff;
+        width: 400px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .modal-btn {
+        margin-top: 20px;
+        color: #fff;
+        background-color: darkgrey;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+    }
+</style>
 
 <body>
+    <div class="modal black-bg">
+    </div>
+    <div class="white-bg modal-content">
+        <p>
+            본 사이트는 학습용 목적으로 만들어 졌습니다.<br>
+            모든 저작권은 원작자에게 있습니다.
+        </p>
+        <button class="modal-btn">닫기</button>
+    </div>
     <div class="wrap">
         <a href="#" class="domino-chat">
             <i class="icon-domi"></i>
@@ -336,5 +383,8 @@
         </footer>
     </div>
 </body>
+<script>
+
+</script>
 
 </html>
